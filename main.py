@@ -115,8 +115,8 @@ def key_handle(body, mouse_pos, rt):
             body.branches.append(Branch(body.nodes[rt.mode1], body.nodes[rt.mode2], 30))
         elif rt.mode == "hitbox":
             body.hitboxes.append(Hitbox(rt.mode1, rt.mode2))
-        elif rt.mode == "hitboxedit":
-            body.hitboxes.append(Hitbox(rt.mode1, rt.mode2))
+        # elif rt.mode == "hitboxedit":
+        #     body.hitboxes.append(Hitbox(rt.mode1, rt.mode2))
         elif rt.mode == "polygon":
             body.polygons.append(Polygon(body, rt.polygon))
             rt.polygon.clear()
