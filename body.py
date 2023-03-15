@@ -14,8 +14,8 @@ def accelerate(self, node):
 class Body:
     # ins = None
     components = {
-        "small mass ball": ["Node", 4, 0.25, 0],
-        "big mass ball": ["Node", 12, 4, 0],
+        "small mass ball": ["Node", 4, 0.5, 0],
+        "big mass ball": ["Node", 12, 2, 0],
         "small charged ball": ["Node", 4, 0.25, 1],
         "small negatively charged ball": ["Node", 4, 1, -1],
         "light spring": ["Branch"],

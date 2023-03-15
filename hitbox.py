@@ -3,7 +3,7 @@ import pygame as pg
 
 
 class Hitbox:
-    def __init__(self, pos1, pos2, flipped=False, thickness=3, color=(255, 80, 80), bounce=0.97, hit_func=lambda self: None):
+    def __init__(self, pos1, pos2, flipped=False, thickness=3, color=(255, 80, 80), bounce=0.98, hit_func=lambda self: None):
         pos1 = Vec2(pos1)
         pos2 = Vec2(pos2)
         self.pos1 = pos1

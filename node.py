@@ -17,7 +17,6 @@ class Node:
         self.body = body
 
     def apply_force(self, mode):
-
         return Vec2(0, -800) * self.mass
         _sum = Vec2()
         for node in self.body.nodes:

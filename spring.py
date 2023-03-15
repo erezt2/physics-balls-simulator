@@ -3,7 +3,7 @@ from helper import min_max
 
 
 class Branch:
-    def __init__(self, node1, node2, length, strength=8, damping=0, color=(80, 255, 80)):
+    def __init__(self, node1, node2, length, strength=8, damping=1, color=(80, 255, 80)):
         self.node1 = node1
         self.node2 = node2
         self.length = length

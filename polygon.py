@@ -26,6 +26,9 @@ class Polygon:
         b = (node2.pos-node3.pos).length()
         c = (node3.pos-node1.pos).length()
         s = (a+b+c)/2
+        if s < a or s < b or s < c:
+            print("area error: ", s-a, s-b, s-c)
+            return 0
         return (s*(s-a)*(s-b)*(s-c))**(1/2)
 
     def get_polygon_area(self):
@@ -36,8 +39,9 @@ class Polygon:
 
     @staticmethod
     def handle_area(area):
-        if area < 10:
-            return 10
+        MIN = 50
+        if area < MIN:
+            return 1/MIN
         return 1 / area**(1/2)
 
     @staticmethod
@@ -47,7 +51,7 @@ class Polygon:
     def apply_forces(self):
         MULT = 200 * 100**2  # * 100 ** 2
         area = self.get_polygon_area()
-        center = sum(map(lambda x: x.pos*x.mass, self.polygon), Vec2()) / sum(map(lambda x: x.mass, self.polygon))
+        center = sum(map(lambda x: x.pos * x.mass, self.polygon), Vec2()) / sum(map(lambda x: x.mass, self.polygon))
 
         lengths = list(map(lambda x: self.handle_length(x, center), self.polygon))
 
