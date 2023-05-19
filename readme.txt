@@ -1,3 +1,5 @@
+\*in the future i will finish the readme file, right now its just text
+
 simple project that includes:
 
 1. balls (nodes)
